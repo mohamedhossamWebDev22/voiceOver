@@ -2,13 +2,19 @@ from logging import PlaceHolder
 import tkinter
 from gtts import gTTS
 from tkinter import *
+import os
 
 window = Tk()
 window.title("Arabic voice over")
 window.geometry("500x400")
 
-inp = Entry(window, width=50)
-inp.place(bordermode=INSIDE, y= 10, x= 100)
+txt = Label(window, width=500, text="Arabic voice over", bg= "blue", fg= "white", font=("sans-serif", 40))
+txt.pack()
 
+inp = Entry(window, width=20, font=("sans-serif", 30))
+inp.place(bordermode=INSIDE, y= 100, x= 25)
+
+btn = Button(window, text="Go", bg= "blue",fg= "white", font=("sans-serif", 20))
+btn.place(bordermode=INSIDE, y= 200, x = 200)
 
 window.mainloop()
