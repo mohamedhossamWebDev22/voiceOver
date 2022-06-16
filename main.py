@@ -36,3 +36,5 @@ who = Label(window, text= made, width=70,bg= "blue", fg= "white")
 who.place(bordermode=OUTSIDE, y=350, x = 0)
 
 window.mainloop()
+
+#THE_END
