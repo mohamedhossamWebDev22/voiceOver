@@ -13,10 +13,13 @@ txt.pack()
 inp = Entry(window, width=20, font=("sans-serif", 30))
 inp.place(bordermode=INSIDE, y= 100, x= 25)
 
-robot = gTTS(inp, lang='ar', slow=False)
+klam = str(inp.get())
+
 
 
 def voice():
+    robot = gTTS(klam, lang='ar', slow=False)
+    
     robot.save('go.mp3')
     os.system("go.mp3")
     
