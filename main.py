@@ -1,4 +1,3 @@
-from logging import PlaceHolder
 import tkinter
 from gtts import gTTS
 from tkinter import *
@@ -14,7 +13,15 @@ txt.pack()
 inp = Entry(window, width=20, font=("sans-serif", 30))
 inp.place(bordermode=INSIDE, y= 100, x= 25)
 
-btn = Button(window, text="Go", bg= "blue",fg= "white", font=("sans-serif", 20))
+robot = gTTS(inp, lang='ar', slow=False)
+
+
+def voice():
+    robot.save('go.mp3')
+    os.system("go.mp3")
+    
+
+btn = Button(window, text="Go", bg= "blue",fg= "white", font=("sans-serif", 20), command= voice())
 btn.place(bordermode=INSIDE, y= 200, x = 200)
 
 window.mainloop()
